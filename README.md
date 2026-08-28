@@ -76,8 +76,6 @@ The repository provides the TBAGNet source code, experiment configurations, fixe
 - Efficient-DVS
 - Metro-data
 
-Pretrained checkpoints are not included in the current release. Additional reproduction materials may be released after acceptance or publication.
-
 Dataset split and manifest files are stored under `data/splits/`. Raw datasets are not redistributed; users must prepare each dataset locally and provide its root path for training or evaluation.
 
 ## Data Preparation
@@ -87,8 +85,6 @@ The original datasets are not included in this repository due to dataset ownersh
 The predefined train/validation/test splits are provided in `data/splits/`. These split files ensure consistent experimental evaluation.
 
 After preparing the datasets, specify the dataset root path through `--data-root`. The dataset adapters load samples according to the provided manifests and split files.
-
-A utility for generating Railway-DAS data splits is provided in `scripts/generate_railway_split.py`.
 
 ## Environment and Installation
 
@@ -137,16 +133,3 @@ Please see `LICENSE` for the applicable review-stage terms.
 
 A formal open-source license may be adopted for a future public release after acceptance or publication of the manuscript.
 
-## Citation
-
-```bibtex
-@misc{TBAGNet,
-  title   = {TBAGNet: A Triple-Branch Adaptive Gated Network for Distributed Acoustic Sensing Event Classification},
-  note    = {Manuscript in preparation},
-  year    = {2026}
-}
-```
-
-## Contact
-
-Contact information may be provided in a future release.
