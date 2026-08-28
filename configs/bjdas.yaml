@@ -1,0 +1,52 @@
+experiment:
+  name: bjdas_tbagnet_seed42
+  protocol: paper_final
+dataset:
+  name: BJDAS
+  manifest: data/splits/bjdas/manifest.csv
+  input_length: 1024
+  stride: 512
+  input_channels: 1
+  num_classes: 6
+  normalize: sample_zscore
+  mat_key: data
+  spatial_reduce: rms
+  expected_shape: [10000, 12]
+  eval_sample_batch_size: 4
+  eval_window_batch_size: 64
+  expected:
+    train_samples: 9867
+    val_samples: 2467
+    test_samples: 3083
+model:
+  name: TBAGNet
+  branch_set: T+F+W
+  feature_dim: 128
+  fusion_type: aga
+  input_channels: 1
+  num_classes: 6
+  dropout: 0.1
+  wavelet_mode: real_morlet
+  wavelet_subbranch_mode: dual
+  tf_image_size: [64, 64]
+  wavelet_conv_depth: 4
+  kernel_mean_subtraction: true
+  spectral_relation_depth: 4
+  tfpatch_relation_depth: 1
+  pooling_mode: max_only
+  freq_patch_size: 16
+  freq_patch_stride: 8
+  tf_patch_size: 16
+  tf_patch_stride: 8
+training:
+  seed: 42
+  batch_size: 64
+  learning_rate: 0.001
+  weight_decay: 0.0001
+  max_epochs: 80
+  patience: 12
+  optimizer: AdamW
+  checkpoint_selection: val_macro_f1
+  deterministic: true
+output:
+  result_dir: outputs/bjdas

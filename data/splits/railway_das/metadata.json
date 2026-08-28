@@ -1,0 +1,123 @@
+{
+  "dataset": "Railway-DAS",
+  "split_seed": 42,
+  "input_length": 1024,
+  "stride": 512,
+  "canonical_manifest_sha256": "37d7367f81e76c1f9919c2fc3f1e7f5e6a2252bba968864f46e1292f7c9ed669",
+  "canonical_split_hashes": {
+    "train": "8ba3f8e83c26deae6318fa784c9a93ffcb7521a2b5fd44fc1a339775a69e4888",
+    "val": "5720c7979742b10b12024162994e6d57b8f9d65373bf503317ce8d066b9f0758",
+    "test": "778f14c52e4e63aa5146205dfb84da72716fa8e8033c4d7b403b99d7c4c43938"
+  },
+  "canonical_label_mapping_sha256": "8c5b174e0fcd83997460cb9c57f83d2d9c2795568b46decfca51d79a069ed805",
+  "sanitized_manifest_sha256": "ca02528b50b797c6cd803c41d2d50f215936fdda6209f30b96e34b6aca5a6d31",
+  "sanitized_split_file_sha256": {
+    "train": "8c5e20e364af1a90ea2e63ef705688031dad2586e4b8c4aebd9837b66a5fc50d",
+    "val": "7979d6dfd2dc18f73a86e3c7ae3c53ebc4f3b56ad2c3cc63709be80732b80258",
+    "test": "c3625d587e08ab7ccf3e17ca8becb22938563aeaff2cdb12c1c2fa5b7615b57f"
+  },
+  "sample_counts": {
+    "train": 7936,
+    "val": 928,
+    "test": 2325
+  },
+  "class_counts": {
+    "train": [
+      {
+        "label": 0,
+        "label_name": "Background_Noise",
+        "count": 1199
+      },
+      {
+        "label": 1,
+        "label_name": "Cable_Deployment",
+        "count": 1799
+      },
+      {
+        "label": 2,
+        "label_name": "Drilling",
+        "count": 800
+      },
+      {
+        "label": 3,
+        "label_name": "Rolling",
+        "count": 1654
+      },
+      {
+        "label": 4,
+        "label_name": "Tapping",
+        "count": 994
+      },
+      {
+        "label": 5,
+        "label_name": "Train_Passing",
+        "count": 1490
+      }
+    ],
+    "val": [
+      {
+        "label": 0,
+        "label_name": "Background_Noise",
+        "count": 133
+      },
+      {
+        "label": 1,
+        "label_name": "Cable_Deployment",
+        "count": 200
+      },
+      {
+        "label": 2,
+        "label_name": "Drilling",
+        "count": 135
+      },
+      {
+        "label": 3,
+        "label_name": "Rolling",
+        "count": 184
+      },
+      {
+        "label": 4,
+        "label_name": "Tapping",
+        "count": 110
+      },
+      {
+        "label": 5,
+        "label_name": "Train_Passing",
+        "count": 166
+      }
+    ],
+    "test": [
+      {
+        "label": 0,
+        "label_name": "Background_Noise",
+        "count": 334
+      },
+      {
+        "label": 1,
+        "label_name": "Cable_Deployment",
+        "count": 500
+      },
+      {
+        "label": 2,
+        "label_name": "Drilling",
+        "count": 339
+      },
+      {
+        "label": 3,
+        "label_name": "Rolling",
+        "count": 460
+      },
+      {
+        "label": 4,
+        "label_name": "Tapping",
+        "count": 277
+      },
+      {
+        "label": 5,
+        "label_name": "Train_Passing",
+        "count": 415
+      }
+    ]
+  },
+  "path_policy": "relative_path=<class_name>/<file_name>; source_path_sha256 preserves original row provenance without exposing local absolute paths."
+}

@@ -1,0 +1,85 @@
+experiment:
+  name: railway_das_tbagnet_seed42
+  protocol: paper_final
+
+dataset:
+  name: Railway-DAS
+  dataset_name: Railway-DAS
+  input_length: 1024
+  stride: 512
+  input_channels: 1
+  num_classes: 6
+  normalize: true
+  data_key: signal
+  mat_cache_size: 8
+  split_dir: data/splits/railway_das
+  split_seed: 42
+  expected:
+    manifest_sha256: 37d7367f81e76c1f9919c2fc3f1e7f5e6a2252bba968864f46e1292f7c9ed669
+    train_samples: 7936
+    val_samples: 928
+    test_samples: 2325
+
+model:
+  name: TBAGNet
+  branches: T+F+W
+  branch_set: T+F+W
+  feature_dim: 128
+  branch_dim: 128
+  fusion_type: aga
+  input_channels: 1
+  num_classes: 6
+  dropout: 0.1
+  tf_transform: cwt_morl
+  wavelet_mode: real_morlet
+  wavelet_subbranch_mode: dual
+  tf_image_size: [64, 64]
+  wavelet_scales: 64
+  wavelet_kernel_size: 129
+  wavelet_center_frequency: 6.0
+  wavelet_conv_depth: 4
+  kernel_mean_subtraction: true
+  spectral_relation_depth: 4
+  tfpatch_relation_depth: 1
+  spectral_patch_relation_depth: 4
+  tfpatch_patch_relation_depth: 1
+  pooling_mode: max_only
+  freq_patch_size: 16
+  freq_patch_stride: 8
+  patch_size: 16
+  patch_stride: 8
+  tf_patch_size: 16
+  tf_patch_stride: 8
+  mixer_kernel_size: 3
+  use_gate: true
+  gate_reduction: 4
+
+training:
+  seed: 42
+  run_seed: 42
+  split_seed: 42
+  batch_size: 64
+  learning_rate: 0.001
+  weight_decay: 0.0001
+  max_epochs: 80
+  patience: 12
+  optimizer: AdamW
+  loss: CrossEntropyLoss
+  scheduler: null
+  class_weights: null
+  num_workers: 0
+  pin_memory: false
+  persistent_workers: false
+  drop_last: false
+  amp: false
+  deterministic: true
+  cudnn_benchmark: false
+  cudnn_deterministic: true
+  checkpoint_selection: val_macro_f1
+  resume: false
+  pretrained_checkpoint: null
+
+output:
+  result_dir: outputs/railway_das
+  checkpoint_dir: outputs/railway_das/checkpoint
+  log_dir: outputs/railway_das

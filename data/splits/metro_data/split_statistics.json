@@ -1,0 +1,26 @@
+{
+  "dataset": "Metro-data",
+  "splits": {
+    "train": {
+      "n": 5238,
+      "class_counts": {
+        "0": 3720,
+        "1": 1518
+      }
+    },
+    "val": {
+      "n": 1310,
+      "class_counts": {
+        "0": 930,
+        "1": 380
+      }
+    },
+    "test": {
+      "n": 417,
+      "class_counts": {
+        "0": 255,
+        "1": 162
+      }
+    }
+  }
+}

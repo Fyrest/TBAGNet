@@ -1,0 +1,25 @@
+Copyright (c) 2026 The Authors. All rights reserved.
+
+This repository is provided solely for academic review and evaluation of the
+manuscript:
+
+“TBAGNet: A Triple-Branch Adaptive Gated Network for Distributed Acoustic
+Sensing Event Classification.”
+
+The source code and accompanying materials are made available at this stage
+only to facilitate manuscript evaluation and reproducibility assessment by
+editors and reviewers.
+
+No permission is granted to copy, modify, redistribute, sublicense, publish,
+or use this repository or any substantial portion of its contents for
+commercial or non-commercial purposes without prior written permission from
+the authors.
+
+This repository does not constitute an open-source release.
+
+Additional implementation details, data preparation instructions, pretrained
+checkpoints, and reproduction materials may be released after acceptance or
+publication of the manuscript.
+
+The authors reserve the right to revise the licensing terms for a future
+public release.

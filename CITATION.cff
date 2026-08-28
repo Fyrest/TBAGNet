@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+title: TBAGNet
+message: "If you use this software, please cite the associated TBAGNet manuscript."
+type: software
+version: 1.0.0
+authors:
+  - name: TBAGNet authors
+preferred-citation:
+  type: article
+  title: "TBAGNet: A Triple-Branch Adaptive Gated Network for Distributed Acoustic Sensing Event Classification"
+  authors:
+    - name: TBAGNet authors
+  year: 2026

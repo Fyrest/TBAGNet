@@ -1,0 +1,46 @@
+experiment:
+  name: fiberrisk_tbagnet_seed42
+  protocol: paper_final
+dataset:
+  name: FiberRisk
+  manifest: data/splits/fiberrisk/manifest.csv
+  input_length: 2500
+  input_channels: 1
+  num_classes: 3
+  normalize: true
+  expected:
+    train_samples: 32148
+    val_samples: 6888
+    test_samples: 6890
+model:
+  name: TBAGNet
+  branch_set: T+F+W
+  feature_dim: 128
+  fusion_type: aga
+  input_channels: 1
+  num_classes: 3
+  dropout: 0.1
+  wavelet_mode: real_morlet
+  wavelet_subbranch_mode: dual
+  tf_image_size: [64, 64]
+  wavelet_conv_depth: 4
+  kernel_mean_subtraction: true
+  spectral_relation_depth: 4
+  tfpatch_relation_depth: 1
+  pooling_mode: max_only
+  freq_patch_size: 16
+  freq_patch_stride: 8
+  tf_patch_size: 16
+  tf_patch_stride: 8
+training:
+  seed: 42
+  batch_size: 128
+  learning_rate: 0.001
+  weight_decay: 0.0
+  max_epochs: 80
+  patience: 12
+  optimizer: AdamW
+  checkpoint_selection: val_macro_f1
+  deterministic: true
+output:
+  result_dir: outputs/fiberrisk
