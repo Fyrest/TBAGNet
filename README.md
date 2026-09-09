@@ -2,11 +2,15 @@
 
 **TBAGNet: A Triple-Branch Adaptive Gated Network for Distributed Acoustic Sensing Event Classification**
 
+This repository contains the official implementation of TBAGNet.
+The manuscript is currently under submission, and additional
+reproducibility documentation will be provided upon publication.
+
 ## Review-Stage Notice
 
 This repository accompanies the manuscript **“TBAGNet: A Triple-Branch Adaptive Gated Network for Distributed Acoustic Sensing Event Classification.”**
 
-The manuscript is currently being prepared for submission. This repository is provided at this stage primarily for academic review and reproducibility assessment.
+The manuscript is currently under submission. This repository is provided at this stage primarily for academic review and reproducibility assessment.
 
 The current release includes the core model implementation, training and evaluation pipelines, dataset configurations, and fixed experimental splits. Public datasets are not redistributed.
 
@@ -40,7 +44,7 @@ The final configuration uses Frequency PGI depth `4`, Wavelet Global Relation Pa
 ## Repository Structure
 
 ```text
-TBAGNet_GitHub/
+TBAGNet/
 ├── LICENSE
 ├── CITATION.cff
 ├── configs/
@@ -88,7 +92,7 @@ After preparing the datasets, specify the dataset root path through `--data-root
 
 ## Environment and Installation
 
-The implementation requires Python, PyTorch, and a CUDA-capable environment for GPU evaluation. Exact package requirements are provided in:
+The implementation requires Python, PyTorch, and a CUDA-capable environment for GPU evaluation. Minimum package requirements are provided in:
 
 - `requirements.txt`
 - `environment.yml`
